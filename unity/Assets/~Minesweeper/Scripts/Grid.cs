@@ -52,7 +52,7 @@ namespace Minesweeper
                     int desiredX = tile.x + x;
                     int desiredY = tile.y + y;
                     if (desiredX < 0 || desiredX >= width ||
-                        desiredY < 0 || desiredY >= height) ;
+                        desiredY < 0 || desiredY >= height);
                 }
             }
             return count;

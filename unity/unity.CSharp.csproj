@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\CircleObject.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GPUInstancing.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GameObjectExtensions.cs" />
@@ -93,7 +94,8 @@
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileObject.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledMap.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TmxObject.cs" />
-    <Compile Include="Assets\Ziggy Zag\Scripts\Player.cs" />
+    <Compile Include="Assets\~Assessments\Assessment1\GameManager.cs" />
+    <Compile Include="Assets\~Assessments\Assessment1\Scripts\Player.cs" />
     <Compile Include="Assets\~Asteroids\Scripts\Asteroid Spawner.cs" />
     <Compile Include="Assets\~Asteroids\Scripts\Movement.cs" />
     <Compile Include="Assets\~Asteroids\Scripts\Shooting.cs" />

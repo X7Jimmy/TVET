@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+namespace GoneHome
 {
-    public Rigidbody rigid;
-    // Use this for initialization
-    void Start()
+    public class Player : MonoBehaviour
     {
+        public Rigidbody rigid;
+        // Use this for initialization
+        void Start()
+        {
 
-    }
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
+        // Update is called once per frame
+        void Update()
+        {
 
+        }
     }
 }
