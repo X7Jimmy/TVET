@@ -8,24 +8,29 @@ public class Player : MonoBehaviour
     private Rigidbody rb;
 
     private bool ismovingright = false;
-    private bool canmove = true;
+    [HideInInspector]
+    public  bool canmove = true;
 
 
     [SerializeField]
     float speed = 4f;
+
+    [SerializeField]
+    GameObject particle;
+
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
     }
 
 
-    void Update()
-    {
+    void Update () {
         if (Input.GetMouseButtonDown(0) && canmove)
         {
             ChangeBoolean();
             ChangeDirection();
         }
+
         if (Physics.Raycast(this.transform.position, Vector3.down * 2) == false)
         {
             FallDown();
@@ -52,5 +57,16 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector3(0f, 0f, speed);
         }
+    }
+    
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "Gem")
+        {
+            Destroy(col.gameObject);
+            GameObject _particle = Instantiate(particle) as GameObject;
+            _particle.transform.position = this.transform.position;
+            Destroy(_particle, 1f);
+        } 
     }
 }
