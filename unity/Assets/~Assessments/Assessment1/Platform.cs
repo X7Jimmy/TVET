@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class NewBehaviourScript : MonoBehaviour
+{
 
     void OnTriggerEnter(Collider col)
     {
@@ -10,11 +11,12 @@ public class NewBehaviourScript : MonoBehaviour {
         {
             Invoke("FallDown", 0.6f);
         }
-	}
+    }
 
     private void FallDown()
     {
         this.GetComponentInParent<Rigidbody>().isKinematic = false;
         Destroy(this.transform.parent.gameObject, 2f);
+
     }
 }

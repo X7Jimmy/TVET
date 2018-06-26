@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 
     private bool ismovingright = false;
     [HideInInspector]
-    public  bool canmove = true;
+    public bool canmove = true;
 
 
     [SerializeField]
@@ -24,7 +24,8 @@ public class Player : MonoBehaviour
     }
 
 
-    void Update () {
+    void Update()
+    {
         if (Input.GetMouseButtonDown(0) && canmove)
         {
             ChangeBoolean();
@@ -58,7 +59,7 @@ public class Player : MonoBehaviour
             rb.velocity = new Vector3(0f, 0f, speed);
         }
     }
-    
+
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Gem")
@@ -67,6 +68,6 @@ public class Player : MonoBehaviour
             GameObject _particle = Instantiate(particle) as GameObject;
             _particle.transform.position = this.transform.position;
             Destroy(_particle, 1f);
-        } 
+        }
     }
 }
